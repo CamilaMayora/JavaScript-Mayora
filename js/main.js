@@ -8,6 +8,7 @@ let autos = [
 //console.log(autos[1]);
 //console.log(autos[2]);
 let listaMarca = autos.map(auto => auto.marca).join(" , ");
+alert("Bienvenido a ⚡ConfiRent")
 
 let usuario = prompt("Selecciona: " + listaMarca)
 
@@ -15,19 +16,24 @@ function usuarios(){
     let eleccion = usuario
 
     if( eleccion === "Chevrolet"){
-        console.log(`Buena eleccion! El ${autos[0].marca} tiene un precio de: ${autos[0].precio}`)
+        alert(`Buena eleccion! El ${autos[0].marca} tiene un precio de: ${autos[0].precio}`)
+        console.log("Vehiculo seleccionado con exito.")
     }
     else if(eleccion === "Toyota"){
-        console.log(`Buena eleccion! El ${autos[1].marca} tiene un precio de: ${autos[1].precio}`)
+        alert(`Buena eleccion! El ${autos[1].marca} tiene un precio de: ${autos[1].precio}`)
+        console.log("Vehiculo seleccionado con exito.")
     }
     else if(eleccion === "Mercedes-Benz"){
-        console.log(`Buena eleccion! El ${autos[2].marca} tiene un precio de: ${autos[2].precio}`)
+        alert(`Buena eleccion! El ${autos[2].marca} tiene un precio de: ${autos[2].precio}`)
+        console.log("Vehiculo seleccionado con exito.")
     }
     else if(eleccion === "Lamborghini"){
-        console.log(`Buena eleccion! El ${autos[3].marca} tiene un precio de: ${autos[3].precio}`)
+        alert(`Buena eleccion! El ${autos[3].marca} tiene un precio de: ${autos[3].precio}`)
+        console.log("Vehiculo seleccionado con exito.")
     }
     else{
-        console.log("Marca no valida.")
+        alert("Marca no valida.")
+        console.log("error.")
     }
 }
 
