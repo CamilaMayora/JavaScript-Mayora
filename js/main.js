@@ -78,19 +78,19 @@ function Ayuda(){
         Nombre = prompt("Campo vacio, intente otra vez:")
     }
 
-    let Numfamiliar = prompt("Numero de cantidad de personas:")
+    let Numfamiliar = prompt("Numero de cantidad de personas(maximo 8):")
     while (isNaN(Numfamiliar) || Numfamiliar <= 0){
         Numfamiliar = parseInt(prompt("Número inválido, intenta otra vez:"));
     }
 
-    let Presupuesto = parseInt(prompt("Presupuesto a gastar:"))
+    let Presupuesto = parseInt(prompt("Presupuesto a gastar (minimo 10000):"))
     while (isNaN(Presupuesto) || Presupuesto <= 0){
         Presupuesto = parseInt(prompt("Presupuesto inválido, intenta otra vez:"));
     }
 
     let autorecomendado 
 
-    if(Numfamiliar <= 5 && Presupuesto == 10000){
+    if(Numfamiliar <= 5 && Presupuesto <= 10000000){
         autorecomendado = alert(`La mejor opcion es ${autos[0].marca} modelos como: 
             \n Spark
             \n Onix
@@ -99,7 +99,7 @@ function Ayuda(){
             \n Silverado 
             \n con capacidad hasta 5 personas estos modelos se vuelven la mejor opcion`)
 
-    } else if (Numfamiliar > 5 && Numfamiliar <=7 && Presupuesto == 10000){
+    } else if (Numfamiliar > 5 && Numfamiliar <=7 && Presupuesto <= 10000000){
         autorecomendado = alert(`La mejor opcion es ${autos[0].marca} modelos 
             como: 
             \n Tracker
@@ -107,7 +107,7 @@ function Ayuda(){
             \n Traverse 
             \n con capacidad hasta 7 personas estos modelos se vuelven la mejor opcion`)
 
-    } else if(Numfamiliar <= 5 && Presupuesto >= 10000 && Presupuesto <= 20000){
+    } else if(Numfamiliar <= 5 && Presupuesto >= 10000 && Presupuesto <= 10000000){
         autorecomendado = alert(`La mejor opcion es ${autos[1].marca} modelos 
         como: 
         \n Yaris
@@ -115,7 +115,7 @@ function Ayuda(){
         \n Camry 
         \n con capacidad hasta 5 personas estos modelos se vuelven la mejor opcion`)
 
-    } else if(Numfamiliar > 5 && Numfamiliar <= 8 && Presupuesto >= 10000 && Presupuesto <= 20000){
+    } else if(Numfamiliar > 5 && Numfamiliar <= 8 && Presupuesto >= 10000 && Presupuesto <= 10000000){
         autorecomendado = alert(`La mejor opcion es ${autos[1].marca} modelos 
         como: 
         \n RAV4
@@ -123,21 +123,21 @@ function Ayuda(){
         \n Land Cruiser 
         \n con capacidad hasta 8 personas estos modelos se vuelven la mejor opcion`)
 
-    }else if(Numfamiliar <= 5 && Presupuesto > 20000 && Presupuesto < 30000){
+    }else if(Numfamiliar <= 5 && Presupuesto > 20000 && Presupuesto <= 10000000){
         autorecomendado = alert(`La mejor opcion es ${autos[2].marca} modelos 
         como: 
         \n Clase A, B, C, E, S 
         \n con capacidad hasta 5 
         personas estos modelos se vuelven la mejor opcion. Estos son autos elegantes, cómodos y generalmente usados como sedanes de lujo`)
 
-    } else if(Numfamiliar >= 5 && Numfamiliar <= 8 && Presupuesto > 20000 && Presupuesto <= 35000){
+    } else if(Numfamiliar >= 5 && Numfamiliar <= 8 && Presupuesto > 20000 && Presupuesto <= 10000000){
         autorecomendado = alert(`La mejor opcion es ${autos[2].marca} modelos 
         como:
         \n GLA, GLB, GLC, GLE
         \n Mercedes-Benz Vito, Clase V, Sprinter
         \n con capacidad hasta 8 personas estos modelos se vuelven la mejor opcion. Estas son ideales para familias grandes o uso comercial`)
 
-    } else if(Numfamiliar == 2 && Presupuesto > 45000){
+    } else if(Numfamiliar == 2 && Presupuesto > 10000000){
         autorecomendado = alert(`La mejor opcion es ${autos[3].marca} modelos 
         como: 
         \n Huracan
