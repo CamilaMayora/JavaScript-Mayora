@@ -42,23 +42,23 @@ function menu() {
 function Autoseleccionado(){
     let listaMarca = autos.map(auto => auto.marca).join(" , ");
     let usuario = prompt("Selecciona: " + listaMarca)
-    const eleccion = usuario
+    const eleccion = usuario.toUpperCase()
     let pasajeros = parseInt(prompt("Indique numero de pasajeros:")) 
     let dinero = parseInt(prompt("Indique Presupuesto:"))
 
-    if( eleccion === "Chevrolet" && pasajeros <=7 && dinero <=45000 ){
+    if( eleccion === "CHEVROLET" && pasajeros <=7 && dinero <=45000 ){
         alert(`Buena eleccion! El ${autos[0].marca} tiene un precio de:\n ${autos[0].precio} x dia \ny un maximo de 7 pasajeros`)
         console.log("Vehiculo seleccionado con exito.")
     }
-    else if(eleccion === "Toyota" && pasajeros <=8 && dinero <=45000  ){
+    else if(eleccion === "TOYOTA" && pasajeros <=8 && dinero <=45000  ){
         alert(`Buena eleccion! El ${autos[1].marca} tiene un precio de:\n ${autos[1].precio} x dia\n y un maximo de 8 pasajeros`)
         console.log("Vehiculo seleccionado con exito.")
     }
-    else if(eleccion === "Mercedes-Benz" && pasajeros <=8 && dinero <=45000 ){
+    else if(eleccion === "MERCEDES-BENZ" && pasajeros <=8 && dinero <=45000 ){
         alert(`Buena eleccion! El ${autos[2].marca} tiene un precio de:\n ${autos[2].precio}x dia\n y un maximo de 8 pasajeros`)
         console.log("Vehiculo seleccionado con exito.")
     }
-    else if(eleccion === "Lamborghini" && pasajeros ===2 && dinero >=45000 ){
+    else if(eleccion === "LAMBORGHINI" && pasajeros ===2 && dinero >=45000 ){
         alert(`Buena eleccion! El ${autos[3].marca} tiene un precio de:\n ${autos[3].precio}x dia \ny un maximo de 2 pasajeros`)
         console.log("Vehiculo seleccionado con exito.")
     }
@@ -67,7 +67,7 @@ function Autoseleccionado(){
         console.log("error.")
     }
 }
- 
+
 menu()
 
 function Ayuda(){
