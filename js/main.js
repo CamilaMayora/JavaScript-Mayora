@@ -12,7 +12,7 @@ let listaMenu = menuOpciones.map(menu => `${menu.id}. ${menu.nombre}`).join
 const autos = [
     { marca: "Chevrolet", precio: 10000, maxpasajeros:7 },
     { marca: "Toyota", precio: 15000, maxpasajeros:8 },
-    { marca: "Mercedes-Benz", precio: 25000, maxpasajeros:8  },
+    { marca: "Mercedes Benz", precio: 25000, maxpasajeros:8  },
     { marca: "Lamborghini", precio: 40000, maxpasajeros:2 }
 ];
 
@@ -39,34 +39,40 @@ function menu() {
 
 
 
-function Autoseleccionado(){
-    let listaMarca = autos.map(auto => `${auto.marca} Pasajeros Maximos:${auto.maxpasajeros}`).join(" , ");
-    let usuario = prompt("Selecciona: " + listaMarca)
-    const eleccion = usuario.toUpperCase()
-    let pasajeros = parseInt(prompt("Indique numero de pasajeros:")) 
-    let dinero = parseInt(prompt("Indique Presupuesto:"))
+function Autoseleccionado() {
+    let listaMarca = autos.map(auto => `\n ${auto.marca} Máx: ${auto.maxpasajeros} pasajeros `).join(",\n");
+    
+    let usuario = prompt("Selecciona una marca de auto:" + listaMarca);
+    if (!usuario) {
+        alert("No ingresaste una marca. Intenta de nuevo.");
+        return;
+    }
 
-    if( eleccion === "CHEVROLET" && pasajeros <=7 && dinero <= 10000000 ){
-        alert(`Buena eleccion! El ${autos[0].marca} tiene un precio de:\n ${autos[0].precio} x dia \ny un maximo de 7 pasajeros`)
-        console.log("Vehiculo seleccionado con exito.")
+    let eleccion = usuario.toUpperCase();
+    let pasajeros = parseInt(prompt("Indique número de pasajeros:"));
+    let dinero = parseInt(prompt("Indique presupuesto:"));
+
+    if (isNaN(pasajeros) || isNaN(dinero)) {
+        alert("Entrada inválida. Asegúrate de ingresar valores numéricos.");
+        return;
     }
-    else if(eleccion === "TOYOTA" && pasajeros <=8 && dinero <=10000000 ){
-        alert(`Buena eleccion! El ${autos[1].marca} tiene un precio de:\n ${autos[1].precio} x dia\n y un maximo de 8 pasajeros`)
-        console.log("Vehiculo seleccionado con exito.")
+
+    let autoSeleccionado = autos.find(auto => auto.marca.toUpperCase() === eleccion);
+
+    if (!autoSeleccionado) {
+        alert("Marca no encontrada. Inténtalo de nuevo.");
+        return;
     }
-    else if(eleccion === "MERCEDES-BENZ" && pasajeros <=8 && dinero <=10000000){
-        alert(`Buena eleccion! El ${autos[2].marca} tiene un precio de:\n ${autos[2].precio}x dia\n y un maximo de 8 pasajeros`)
-        console.log("Vehiculo seleccionado con exito.")
-    }
-    else if(eleccion === "LAMBORGHINI" && pasajeros ===2 && dinero >=10000000 ){
-        alert(`Buena eleccion! El ${autos[3].marca} tiene un precio de:\n ${autos[3].precio}x dia \ny un maximo de 2 pasajeros`)
-        console.log("Vehiculo seleccionado con exito.")
-    }
-    else{
-        alert("Error, intentalo otra vez")
-        console.log("error.")
+
+    if (pasajeros <= autoSeleccionado.maxpasajeros && dinero >= autoSeleccionado.precio) {
+        alert(`Buena elección! \nEl ${autoSeleccionado.marca} tiene un precio de ${autoSeleccionado.precio} x día y un máximo de ${autoSeleccionado.maxpasajeros} pasajeros.`);
+        console.log("Vehículo seleccionado con éxito.");
+    } else {
+        alert("No cumple con los requisitos de pasajeros o presupuesto. Intenta de nuevo.");
+        console.log("Error.");
     }
 }
+
 
 menu()
 
