@@ -5,10 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConfiRent</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./js/main.js" ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script defer src="./js/main.js" ></script> 
 </head>
 <body>
-    <h1>Camila Mayora</h1>
-    <h3>(fondo cambiado para el bienestar visual)</h3>
+    <header>
+        <nav>
+        <div class="icon">
+            <img src="./img/alquiler-de-coches.png" alt="">
+            </div>
+        <ul class="link-head">
+            <li>
+                <a href="#">HOME</a>
+                <a href="#" id="auto">AUTOS</a>
+                <a href="#" id="ayuda">AYUDA</a>
+            </li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+
+        <div id="cartel" >
+            <button class="close-btn" id="cerrar-cartel">X</button>
+            <h2 class="title">Busquemos tu Auto:</h2>
+            <p class="subtitle">Selecciona una:</p>
+            <button onclick="Vehiculo('chevrolet')" class="boton">Chevrolet</button>
+            <button  onclick="Vehiculo('toyota')" class="boton">Toyota </button>
+            <button  onclick="Vehiculo('mercedesbenz')" class="boton">Mercedes Benz</button>
+            <button  onclick="Vehiculo('lamborghini')" class="boton">Lamborghini</button>
+
+            <div id="resultados"></div>
+        </div>
+
+
+        <div id="cartelAyuda">
+            <button class="close-btn" id="cerrar-cartel2">X</button>
+            <h2 class="title">Cual Elijo?</h2>
+            <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsa maiores quia accusantium soluta voluptas ullam dolor? Est explicabo eaque ex. Labore debitis fuga minima excepturi, ipsum et itaque neque.</p>
+
+            <p class="subtitle">Selecciona una:</p>
+            <button onclick="Ayuda('chevrolet')" class="boton">Chevrolet</button>
+            <button  onclick="Ayuda('toyota')" class="boton">Toyota </button>
+            <button  onclick="Ayuda('mercedesbenz')" class="boton">Mercedes Benz</button>
+            <button  onclick="Ayuda('lamborghini')" class="boton">Lamborghini</button>
+            <div id="resultado"></div>
+        </div>
+
+        <div class="info-card">
+            <h1 class="title">Quienes Somos?</h1>
+            <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa illo, totam iure dolor laborum soluta vel consequatur voluptatibus quis numquam nesciunt, aliquid placeat quod deleniti est. Dolor omnis repudiandae et.
+            Vitae quos repudiandae dignissimos eaque consequatur sed. Magnam, dignissimos quibusdam possimus debitis consectetur tempora sapiente sit iusto minima incidunt expedita tempore dolores distinctio earum sequi numquam provident quas molestiae quod.
+            Voluptates rerum doloremque corporis asperiores quibusdam, atque, hic, omnis minus commodi ex officiis tenetur soluta? Maiores ex asperiores harum commodi eum, cupiditate, pariatur dicta quidem modi perferendis corporis ipsa dolor?
+            Nihil, in inventore iusto reiciendis quidem dicta ullam ipsum non quaerat ex corrupti dignissimos quisquam porro quam sit quibusdam error quos nemo itaque? Placeat id voluptatibus temporibus quia qui natus.
+            Tempore ea corporis labore cupiditate deleniti voluptates commodi ratione esse officia aliquam dolore error adipisci ipsum facilis animi illum voluptate, accusamus corrupti, culpa aliquid beatae tempora voluptatem! Ut, est debitis.
+            Tenetur, doloremque nesciunt veniam similique placeat provident praesentium sint quis commodi reprehenderit. Ea, ipsa aliquid. A ipsum odio ut hic earum, aliquid doloremque sed provident suscipit distinctio, repudiandae tempore cumque.</p>
+        </div>
+
+        <div class="ubi-card">
+            <h2 class="title">Ubicacion:</h2>
+            <p class="subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis necessitatibus ullam consectetur numquam nobis dolore obcaecati dolorum aliquam consequatur ipsum voluptatum nam, illum tempore fugiat? Voluptates soluta itaque expedita reiciendis!</p>
+            <div class="maps-card">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50767.58136758579!2d-59.183901531294936!3d-37.31944744876534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911f9b2733946f%3A0xceef2c76899c202d!2sTandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1745530036250!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6809.075143886176!2d-64.1897398031897!3d-31.42686444202155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28fb8f9010b%3A0xf38e0d8c5a49ab83!2sNueva%20C%C3%B3rdoba%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1745530127096!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52343.08435776048!2d-57.994369756729405!3d-34.920430869499896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e62b1f0085a1%3A0xbcfc44f0547312e3!2sLa%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1745530157506!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13130.659882583748!2d-58.411958678184064!3d-34.63790581246675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb1160a8e62b%3A0x42f33f7586b05be1!2sParque%20Patricios%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1745530190630!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </div>
+
+        <div>
+            <h3>Referecias:</h3>
+            <p>img</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-card">
+        <div class="info-footer-card">
+            <ul>
+                <li>
+                    <a href="#">HOME</a>
+                    <a href="#">AUTOS</a>
+                    <a href="#">AYUDA</a>
+                </li>
+            </ul>
+        </div>
+        <div class="icon">
+            <img src="./img/carro-deportivo.png" alt="">
+            </div>
+        <div class="icon-footer-card">
+            <p><i class="bi bi-whatsapp"></i></p>
+            <p><i class="bi bi-instagram"></i></p>
+            <p><i class="bi bi-envelope-at"></i></p>
+        </div>
+    </div>
+    </footer>
 </body>
 </html>

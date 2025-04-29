@@ -1,163 +1,289 @@
-alert("Bienvenido a ⚡ConfiRent")
 
-const menuOpciones = [
-    { id: 1, nombre: "Elegir auto"},
-    { id: 2, nombre: "Ayuda para buscar auto"},
-    { id: 3, nombre: "Salir"}
-];
+const vehiculos = document.getElementById("auto")
+const cartel = document.getElementById("cartel")
+const ayuda = document.getElementById("ayuda")
+const cartel2 = document.getElementById("cartelAyuda")
+const cerrar1 = document.getElementById("cerrar-cartel")
+const cerrar2 = document.getElementById("cerrar-cartel2")
 
-let listaMenu = menuOpciones.map(menu => `${menu.id}. ${menu.nombre}`).join
-("\n")
+const Autos ={
+    chevrolet: [
+        {
+        modelo: 'Chevrolet Silverado',
+        año: 2023,
+        tipo: 'Pick-up',
+        color: 'Negro',
+        motor: '6.2L V8',
+        descripcion: " Capacidad: 3-5 personas (doble cabina) Comodidad: Amplio espacio interior, asientos ergonómicos para viajes largos, pero posición de manejo más rígida típica de camionetas.",
+        precio: 200
+        },
+        {
+        modelo: 'Chevrolet Camaro',
+        año: 2022,
+        tipo: 'Deportivo',
+        color: 'Rojo',
+        motor: '6.2L V8',
+        descripcion: " Capacidad: 4 personas (2+2, traseros ajustados), Comodidad: Asientos deportivos envolventes, baja altura de ingreso, poco espacio trasero (ideal para 2 adultos cómodos).",
+        precio: 200
+        },
+        {
+        modelo: 'Chevrolet Malibu',
+        año: 2021,
+        tipo: 'Sedán',
+        color: 'Blanco',
+        motor: '1.5L Turbo',
+        descripcion:"Capacidad: 5 adultos (espacio generoso). Comodidad: Suspensión suave, amplio espacio para piernas en traseros, asientos acolchados (excelente para ciudad/carretera).",
+        precio: 200
+        },
+        {
+        modelo: 'Chevrolet Equinox',
+        año: 2023,
+        tipo: 'SUV',
+        color: 'Azul',
+        motor: '2.0L Turbo',
+        descripcion:"Capacidad: 5 adultos (ó 7 en versión L). Comodidad: Altura elevada para fácil ingreso, asientos reclinables y buen espacio de carga (balance ciudad/viajes).",
+        precio: 200
+        },
+    ],
 
-const autos = [
-    { marca: "Chevrolet", precio: 10000, maxpasajeros:7 },
-    { marca: "Toyota", precio: 15000, maxpasajeros:8 },
-    { marca: "Mercedes Benz", precio: 25000, maxpasajeros:8  },
-    { marca: "Lamborghini", precio: 40000, maxpasajeros:2 }
-];
+    toyota: [
+        {
+        modelo: 'Toyota Camry',
+        año: 2023,
+        tipo: 'Sedán',
+        color: 'Gris',
+        motor: '2.5L I4',
+        descripcion:"Capacidad: 5 adultos (espacio premium). Comodidad: Asientos ventilados disponibles,aislamiento acústico superior, suspensión adaptativa (el más lujoso de la línea)",        
+        precio: 250
+        },
+        {
+        modelo: 'Toyota Corolla',
+        año: 2022,
+        tipo: 'Sedán',
+        color: 'Blanco',
+        motor: '1.8L I4',
+        descripcion:"Capacidad: 5 adultos (traseros algo justos). Comodidad: Asientos básicos pero ergonómicos, manejo ágil en ciudad (ideal para uso urbano).",
+        precio: 250
+        },
+        {
+        modelo: 'Toyota RAV4',
+        año: 2023,
+        tipo: 'SUV',
+        color: 'Negro',
+        motor: '2.5L I4',
+        descripcion:" Capacidad: 5 adultos (versión híbrida disponible).Comodidad: Altura regulable, amplio campo visual, maletero de 580L (perfecto para familias activas).",
+        precio: 250
+        },
+        {
+        modelo: 'Toyota Tacoma',
+        año: 2023,
+        tipo: 'Pick-up',
+        color: 'Azul',
+        motor: '3.5L V6',
+        descripcion:" Capacidad: 5 personas (Doble Cabina). Comodidad: Asientos reforzados para off-road, cabina insonorizada, versión TRD con suspensión especial para terrenos rudos.",
+        precio: 250
+        },
+    ],
+    
+    mercedesbenz: [
+        {
+        modelo: 'Mercedes-Benz S-Class',
+        año: 2023,
+        tipo: 'Sedán',
+        color: 'Plata',
+        motor: '4.0L V8 Biturbo',
+        descripcion:"Capacidad: 5 adultos (espacio ejecutivo). Comodidad: Asientos climatizados masajeadores, sistema de sonido Burmester 4D, suspensión Magic Body Control que lee el camino.",
+        precio: 1000
+        },
+        {
+        modelo: 'Mercedes-Benz E-Class',
+        año: 2022,
+        tipo: 'Sedán',
+        color: 'Negro',
+        motor: '3.0L I6 Turbo',
+        descripcion:"Capacidad: 5 adultos. Comodidad: Asientos multicontorno con memoria, pantallas duales 12.3\", control de clima de 4 zonas y asistencia de conducción semi-autónoma.",
+        precio: 1000
+        },
+        {
+        modelo: 'Mercedes-Benz GLC',
+        año: 2023,
+        tipo: 'SUV',
+        color: 'Blanco',
+        motor: '2.0L I4 Turbo',
+        descripcion:"Capacidad: 5 adultos (7 en versión L). Comodidad: Altura elevada para mejor visibilidad, techo panorámico, maletero de 550L y MBUX con realidad aumentada.",
+        precio: 1000
+        },
+        {
+        modelo: 'Mercedes-Benz A-Class',
+        año: 2022,
+        tipo: 'Hatchback',
+        color: 'Azul',
+        motor: '2.0L I4 Turbo',
+        descripcion:"Capacidad: 5 adultos (compacto). Comodidad: Cabina digital widescreen, MBUX con reconocimiento de voz, asientos deportivos y manejo ágil para ciudad.",
+        precio: 1000
+        },
+    ],
 
-function menu() {
-    let elegir;
+    lamborghini: [
+        {
+        modelo: 'Lamborghini Aventador',
+        año: 2023,
+        tipo: 'Deportivo',
+        color: 'Amarillo',
+        motor: '6.5L V12',
+        descripcion:"Capacidad: 2 personas (configuración coupé). Comodidad: Asientos deportivos carbon fiber ajustables, modo Strada para conducción diaria y carrocería monocoque de fibra de carbono.",
+        precio: 10000
+        },
+        {
+        modelo: 'Lamborghini Huracán',
+        año: 2022,
+        tipo: 'Deportivo',
+        color: 'Rojo',
+        motor: '5.2L V10',
+        descripcion:"Capacidad: 2 personas. Comodidad: Suspensión magnetorheológica, volante multifunción con modo ANIMA, y sistema de infoentretenimiento Lamborghini Connect.",
+        precio: 10000
+        },
+        {
+        modelo: 'Lamborghini Urus',
+        año: 2023,
+        tipo: 'SUV',
+        color: 'Negro',
+        motor: '4.0L V8 Biturbo',
+        descripcion:"Capacidad: 5 adultos (lujo extremo). Comodidad: Asientos de piel premium con calefacción/ventilación, espacio para maletas de 616L y 4 modos de conducción (incluido Sabbia para arena).",
+        precio: 10000
+        },
+        {
+        modelo: 'Lamborghini Sián',
+        año: 2022,
+        tipo: 'Deportivo',
+        color: 'Verde',
+        motor: '6.5L V12 híbrido',
+        descripcion:"Capacidad: 2 personas (edición limitada). Comodidad: Materiales exclusivos de personalización Ad Personam, tecnología supercapacitor y aerodinámica activa inteligente.",
+        precio: 10000
+        },
+    ],
+}
 
-    do {
-        elegir = parseInt(prompt("Selecciona una opción:\n" + listaMenu));
+function AbrirCartel (element, evento, accion){
+    element.addEventListener(evento,  accion)
+}
 
-        if (elegir === 1) {
-            Autoseleccionado();
-        } else if (elegir === 2) {
-            Ayuda();
-        } else if (elegir === 3) {
-            alert("¡Gracias por usar ConfiRent! 🚗❤️");
-            console.log("Operación finalizada");
-            break;
-        } else {
-            alert("Opción no válida. Intenta de nuevo.");
+function CerrarCartel(element, evento, accion){
+    element.addEventListener(evento,accion)
+}
+
+
+CerrarCartel(cerrar1, "click", () => {
+    cartel.style.display  = "none"
+})
+
+CerrarCartel(cerrar2, "click", () => {
+    cartel2.style.display  = "none"
+})
+
+
+
+AbrirCartel(vehiculos,  "click", () => {
+    cartel.style.display = "block"
+})
+
+AbrirCartel(ayuda, "click", () => {
+    cartel2.style.display = "block"
+})
+
+function Vehiculo(marca){
+    const resultados = document.getElementById("resultados")
+    const usuario = marca.toLowerCase()
+
+    resultados.innerHTML=""
+
+    if(Autos[usuario]){
+        Autos[usuario].forEach(auto => {
+            const info = 
+        `<div>
+        <div class="car-card">
+        <h3 class="car-model"> ${auto.modelo}</h3>
+        <p class="car-detail">Color: ${auto.color}</p>
+        <p class="car-detail">Tipo: ${auto.tipo}</p>
+        <p class="car-detail">Año: ${auto.año}</p>
+        <p class="car-price">Precio: ${auto.precio}</p>
+        <br>
+        <a href="../html/login.html"class="boton"<button>Alquilar</button></a>
+        </div>
+        </div>`
+
+        resultados.innerHTML += info
+        })
+    }else {
+        resultados.innerHTML = "<p>No encontramos resultados...</p>"
+    }
+}
+
+function Ayuda(marca){
+const eleccion = marca.toLowerCase()
+const resultado = document.getElementById("resultado")
+resultado.innerHTML=""
+
+if(Autos[eleccion]){
+    Autos[eleccion].forEach(auto => {
+        const info = 
+    `<div class="cars-container">
+    <div class="car-card">
+    <h3  class="car-model"> ${auto.modelo}</h3>
+    <p class="car-detail">Tipo: ${auto.tipo}</p>
+    <p class="car-detail">Año: ${auto.año}</p>
+    <p class="car-description">Descripcion: ${auto.descripcion}</p>
+    <p class="car-price">Precio: ${auto.precio}</p>
+    </div>
+    </div>`
+    resultado.innerHTML += info
+    })
+}else {
+    resultado.innerHTML = "<p>No encontramos resultados...</p>"
+}
+}
+
+function guardarDatos(){
+    const name = document.getElementById('name')
+    const number = document.getElementById('number')
+    const date = document.getElementById('date')
+    const nationality = document.getElementById('nationality')
+    const city = document.getElementById('city')
+
+    const resultado = document.getElementById('Alerta')
+
+    resultado.innerHTML = ''
+
+    const valor1 = name.value
+    const valor2 = number.value
+    const valor3 = date.value
+    const valor4 = nationality.value
+    const valor5 = city.value
+
+
+    if(valor1 && valor2 && valor3 && valor4 && valor5){
+        const data = {
+            valor1: valor1,
+            valor2: valor2,
+            valor3: valor3,
+            valor4: valor4,
+            valor5: valor5
         }
 
-    } while (true); 
-}
+        const dataJSON = JSON.stringify(data)
 
+        localStorage.setItem('guardarDatos', dataJSON )
 
+        const mensaje = 
+            `
+            <p class="mensajeExito">Formulario Enviado. En breve nos comunicaremos</p>
+            <br>
+            <p class="mensajeExito"> Gracias por confiar en ConfiRent </p>
+            `
+        
 
-function Autoseleccionado() {
-    let listaMarca = autos.map(auto => `\n ${auto.marca} Máx: ${auto.maxpasajeros} pasajeros `).join(",\n");
-    
-    let usuario = prompt("Selecciona una marca de auto:" + listaMarca);
-    if (!usuario) {
-        alert("No ingresaste una marca. Intenta de nuevo.");
-        return;
+        resultado.innerHTML += mensaje
+    }else{
+        resultado.innerHTML = '<p class="mensajeError" >Revise el formulario y vuelva a intentarlo</p>'
     }
-
-    let eleccion = usuario.toUpperCase();
-    let pasajeros = parseInt(prompt("Indique número de pasajeros:"));
-    let dinero = parseInt(prompt("Indique presupuesto:"));
-
-    if (isNaN(pasajeros) || isNaN(dinero)) {
-        alert("Entrada inválida. Asegúrate de ingresar valores numéricos.");
-        return;
-    }
-
-    let autoSeleccionado = autos.find(auto => auto.marca.toUpperCase() === eleccion);
-
-    if (!autoSeleccionado) {
-        alert("Marca no encontrada. Inténtalo de nuevo.");
-        return;
-    }
-
-    if (pasajeros <= autoSeleccionado.maxpasajeros && dinero >= autoSeleccionado.precio) {
-        alert(`Buena elección! \nEl ${autoSeleccionado.marca} tiene un precio de ${autoSeleccionado.precio} x día y un máximo de ${autoSeleccionado.maxpasajeros} pasajeros.`);
-        console.log("Vehículo seleccionado con éxito.");
-    } else {
-        alert("No cumple con los requisitos de pasajeros o presupuesto. Intenta de nuevo.");
-        console.log("Error.");
-    }
-}
-
-
-menu()
-
-function Ayuda(){
-    alert("Te ayudamos a buscar el auto que mas se adapte a tus necesidades. \n Estas listo?")
-
-    let Nombre = prompt("ingresa tu nombre:")
-    while (!Nombre){
-        Nombre = prompt("Campo vacio, intente otra vez:")
-    }
-
-    let Numfamiliar = prompt("Numero de cantidad de personas(maximo 8):")
-    while (isNaN(Numfamiliar) || Numfamiliar <= 0){
-        Numfamiliar = parseInt(prompt("Número inválido, intenta otra vez:"));
-    }
-
-    let Presupuesto = parseInt(prompt("Presupuesto a gastar (minimo 10000):"))
-    while (isNaN(Presupuesto) || Presupuesto <= 0){
-        Presupuesto = parseInt(prompt("Presupuesto inválido, intenta otra vez:"));
-    }
-
-    let autorecomendado 
-
-    if(Numfamiliar <= 5 && Presupuesto <= 10000000){
-        autorecomendado = alert(`La mejor opcion es ${autos[0].marca} modelos como: 
-            \n Spark
-            \n Onix
-            \n Aveo
-            \n S10
-            \n Silverado 
-            \n con capacidad hasta 5 personas estos modelos se vuelven la mejor opcion`)
-
-    } else if (Numfamiliar > 5 && Numfamiliar <=7 && Presupuesto <= 10000000){
-        autorecomendado = alert(`La mejor opcion es ${autos[0].marca} modelos 
-            como: 
-            \n Tracker
-            \n Equinox
-            \n Traverse 
-            \n con capacidad hasta 7 personas estos modelos se vuelven la mejor opcion`)
-
-    } else if(Numfamiliar <= 5 && Presupuesto >= 15000000 && Presupuesto <= 20000000){
-        autorecomendado = alert(`La mejor opcion es ${autos[1].marca} modelos 
-        como: 
-        \n Yaris
-        \n Corolla
-        \n Camry 
-        \n con capacidad hasta 5 personas estos modelos se vuelven la mejor opcion`)
-
-    } else if(Numfamiliar > 5 && Numfamiliar <= 8 && Presupuesto >= 15000000 && Presupuesto <= 20000000){
-        autorecomendado = alert(`La mejor opcion es ${autos[1].marca} modelos 
-        como: 
-        \n RAV4
-        \n Highlander
-        \n Land Cruiser 
-        \n con capacidad hasta 8 personas estos modelos se vuelven la mejor opcion`)
-
-    }else if(Numfamiliar <= 5 && Presupuesto > 20000000 && Presupuesto <= 30000000){
-        autorecomendado = alert(`La mejor opcion es ${autos[2].marca} modelos 
-        como: 
-        \n Clase A, B, C, E, S 
-        \n con capacidad hasta 5 
-        personas estos modelos se vuelven la mejor opcion. Estos son autos elegantes, cómodos y generalmente usados como sedanes de lujo`)
-
-    } else if(Numfamiliar >= 5 && Numfamiliar <= 8 && Presupuesto > 30000000 && Presupuesto <= 40000000){
-        autorecomendado = alert(`La mejor opcion es ${autos[2].marca} modelos 
-        como:
-        \n GLA, GLB, GLC, GLE
-        \n Mercedes-Benz Vito, Clase V, Sprinter
-        \n con capacidad hasta 8 personas estos modelos se vuelven la mejor opcion. Estas son ideales para familias grandes o uso comercial`)
-
-    } else if(Numfamiliar == 2 && Presupuesto > 100000000){
-        autorecomendado = alert(`La mejor opcion es ${autos[3].marca} modelos 
-        como: 
-        \n Huracan
-        \n Aventador
-        \n Revuelto
-        \n Gallardo
-        \n Urus
-        \n Los Lamborghini son autos deportivos de lujo, diseñados principalmente para 2 personas.`)
-
-    } else{
-        alert("No pudimos encontrar un auto para tus necesidades, lo sentimos. ConfiRent❤️")
-    }
-
-    alert(`Hola ${Nombre}!👋Esperamos que la informacion te sea de ayuda`)
-    
-}
-
+} 
