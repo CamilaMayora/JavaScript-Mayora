@@ -1,0 +1,170 @@
+{
+    "chevrolet": [
+    {
+        "modelo": "Chevrolet Silverado",
+        "img": "https://i.postimg.cc/BbV2333b/C1.jpg",
+        "año": 2023,
+        "tipo": "Pick-up",
+        "color": "Negro",
+        "motor": "6.2L V8",
+        "descripcion": "Capacidad: 3-5 personas (doble cabina) Comodidad: Amplio espacio interior, asientos ergonómicos para viajes largos, pero posición de manejo más rígida típica de camionetas.",
+        "precio": 200
+    },
+    {
+        "modelo": "Chevrolet Camaro",
+        "img": "https://i.postimg.cc/kG4WL4kL/c2.jpg",
+        "año": 2022,
+        "tipo": "Deportivo",
+        "color": "Rojo",
+        "motor": "6.2L V8",
+        "descripcion": "Capacidad: 4 personas (2+2, traseros ajustados), Comodidad: Asientos deportivos envolventes, baja altura de ingreso, poco espacio trasero (ideal para 2 adultos cómodos).",
+        "precio": 200
+    },
+    {
+        "modelo": "Chevrolet Malibu",
+        "img": "https://i.postimg.cc/8kKRMRvG/c3.jpg",
+        "año": 2021,
+        "tipo": "Sedán",
+        "color": "Blanco",
+        "motor": "1.5L Turbo",
+        "descripcion": "Capacidad: 5 adultos (espacio generoso). Comodidad: Suspensión suave, amplio espacio para piernas en traseros, asientos acolchados (excelente para ciudad/carretera).",
+        "precio": 200
+    },
+    {
+        "modelo": "Chevrolet Equinox",
+        "img": "https://i.postimg.cc/xTXKRXGz/c4.jpg",
+        "año": 2023,
+        "tipo": "SUV",
+        "color": "Azul",
+        "motor": "2.0L Turbo",
+        "descripcion": "Capacidad: 5 adultos (ó 7 en versión L). Comodidad: Altura elevada para fácil ingreso, asientos reclinables y buen espacio de carga (balance ciudad/viajes).",
+        "precio": 200
+    }
+    ],
+    "toyota": [
+    {
+        "modelo": "Toyota Camry",
+        "img": "https://i.postimg.cc/s2d913hZ/T1.jpg",
+        "año": 2023,
+        "tipo": "Sedán",
+        "color": "Gris",
+        "motor": "2.5L I4",
+        "descripcion": "Capacidad: 5 adultos (espacio premium). Comodidad: Asientos ventilados disponibles,aislamiento acústico superior, suspensión adaptativa (el más lujoso de la línea)",
+        "precio": 250
+    },
+    {
+        "modelo": "Toyota Corolla",
+        "img": "https://i.postimg.cc/Pr7MsWfy/t2.jpg",
+        "año": 2022,
+        "tipo": "Sedán",
+        "color": "Blanco",
+        "motor": "1.8L I4",
+        "descripcion": "Capacidad: 5 adultos (traseros algo justos). Comodidad: Asientos básicos pero ergonómicos, manejo ágil en ciudad (ideal para uso urbano).",
+        "precio": 250
+    },
+    {
+        "modelo": "Toyota RAV4",
+        "img": "https://i.postimg.cc/QtjQkSS8/t3.jpg",
+        "año": 2023,
+        "tipo": "SUV",
+        "color": "Negro",
+        "motor": "2.5L I4",
+        "descripcion": "Capacidad: 5 adultos (versión híbrida disponible).Comodidad: Altura regulable, amplio campo visual, maletero de 580L (perfecto para familias activas).",
+        "precio": 250
+    },
+    {
+        "modelo": "Toyota Tacoma",
+        "img": "https://i.postimg.cc/wvFhWJbh/t4.jpg",
+        "año": 2023,
+        "tipo": "Pick-up",
+        "color": "Azul",
+        "motor": "3.5L V6",
+        "descripcion": "Capacidad: 5 personas (Doble Cabina). Comodidad: Asientos reforzados para off-road, cabina insonorizada, versión TRD con suspensión especial para terrenos rudos.",
+        "precio": 250
+    }
+    ],
+    "mercedesbenz": [
+    {
+        "modelo": "Mercedes-Benz S-Class",
+        "img": "https://i.postimg.cc/52FSxX6V/M1.jpg",
+        "año": 2023,
+        "tipo": "Sedán",
+        "color": "Plata",
+        "motor": "4.0L V8 Biturbo",
+        "descripcion": "Capacidad: 5 adultos (espacio ejecutivo). Comodidad: Asientos climatizados masajeadores, sistema de sonido Burmester 4D, suspensión Magic Body Control que lee el camino.",
+        "precio": 1000
+    },
+    {
+        "modelo": "Mercedes-Benz E-Class",
+        "img": "https://i.postimg.cc/d02Ryg2N/m2.jpg",
+        "año": 2022,
+        "tipo": "Sedán",
+        "color": "Negro",
+        "motor": "3.0L I6 Turbo",
+        "descripcion": "Capacidad: 5 adultos. Comodidad: Asientos multicontorno con memoria, pantallas duales 12.3\", control de clima de 4 zonas y asistencia de conducción semi-autónoma.",
+        "precio": 1000
+    },
+    {
+        "modelo": "Mercedes-Benz GLC",
+        "img": "https://i.postimg.cc/pdJ8Tzvg/m3.jpg",
+        "año": 2023,
+        "tipo": "SUV",
+        "color": "Blanco",
+        "motor": "2.0L I4 Turbo",
+        "descripcion": "Capacidad: 5 adultos (7 en versión L). Comodidad: Altura elevada para mejor visibilidad, techo panorámico, maletero de 550L y MBUX con realidad aumentada.",
+        "precio": 1000
+    },
+    {
+        "modelo": "Mercedes-Benz A-Class",
+        "img": "https://i.postimg.cc/C1M8f5Ld/n4.jpg",
+        "año": 2022,
+        "tipo": "Hatchback",
+        "color": "Azul",
+        "motor": "2.0L I4 Turbo",
+        "descripcion": "Capacidad: 5 adultos (compacto). Comodidad: Cabina digital widescreen, MBUX con reconocimiento de voz, asientos deportivos y manejo ágil para ciudad.",
+        "precio": 1000
+    }
+    ],
+    "lamborghini": [
+    {
+        "modelo": "Lamborghini Aventador",
+        "img": "https://i.postimg.cc/TwkDjxp0/L1.jpg",
+        "año": 2023,
+        "tipo": "Deportivo",
+        "color": "Amarillo",
+        "motor": "6.5L V12",
+        "descripcion": "Capacidad: 2 personas (configuración coupé). Comodidad: Asientos deportivos carbon fiber ajustables, modo Strada para conducción diaria y carrocería monocoque de fibra de carbono.",
+        "precio": 10000
+    },
+    {
+        "modelo": "Lamborghini Huracán",
+        "img": "https://i.postimg.cc/rsKtQH4k/l2.jpg",
+        "año": 2022,
+        "tipo": "Deportivo",
+        "color": "Rojo",
+        "motor": "5.2L V10",
+        "descripcion": "Capacidad: 2 personas. Comodidad: Suspensión magnetorheológica, volante multifunción con modo ANIMA, y sistema de infoentretenimiento Lamborghini Connect.",
+        "precio": 10000
+    },
+    {
+        "modelo": "Lamborghini Urus",
+        "img": "https://i.postimg.cc/Sx8CBHvQ/l3.jpg",
+        "año": 2023,
+        "tipo": "SUV",
+        "color": "Negro",
+        "motor": "4.0L V8 Biturbo",
+        "descripcion": "Capacidad: 5 adultos (lujo extremo). Comodidad: Asientos de piel premium con calefacción/ventilación, espacio para maletas de 616L y 4 modos de conducción (incluido Sabbia para arena).",
+        "precio": 10000
+    },
+    {
+        "modelo": "Lamborghini Sián",
+        "img": "https://i.postimg.cc/dtgGSJnS/l4.jpg",
+        "año": 2022,
+        "tipo": "Deportivo",
+        "color": "Verde",
+        "motor": "6.5L V12 híbrido",
+        "descripcion": "Capacidad: 2 personas (edición limitada). Comodidad: Materiales exclusivos de personalización Ad Personam, tecnología supercapacitor y aerodinámica activa inteligente.",
+        "precio": 10000
+    }
+    ]
+}
