@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConfiRent | AUTOS</title>
+    <link rel="shortcut icon" href="../img/servicio-de-auto.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/autos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script defer src="../js/autos.js"></script>
+    <script defer src="../js/formulario.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/validator@13.9.0/validator.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,7 +29,7 @@
         </nav>
     </header> 
     <main>
-
+        <h1 class="aviso">Los precios de los autos son por dia </h1>
         <div id="informacion"></div>
 
 
@@ -37,30 +42,28 @@
     <form id="formularioAlquiler">
 
     <label for="nombre">Nombre/s</label>
-    <input type="text" id="nombre" name="nombre" required />
+    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Walter"/>
 
     <label for="apellido">Apellido</label>
-    <input type="text" id="apellido" name="apellido" required />
+    <input type="text" id="apellido" name="apellido" required placeholder="Ej: Torres"/>
 
     <label for="edad">Edad</label>
-    <input type="number" id="edad" name="edad" required min="18" />
+    <input type="number" id="edad" name="edad" required min="18" placeholder="Ej: 18"/>
 
     <label for="licencia">Licencia de conducir</label>
-    <input type="text" id="licencia" name="licencia" required />
+    <input type="text" id="licencia" name="licencia" required placeholder="Ej: 12345678"/>
 
     <label for="documento">Número de documento</label>
-    <input type="text" id="documento" name="documento" required />
+    <input type="text" id="documento" name="documento" required placeholder="Ej: 40567876"/>
 
     <label for="ciudad">Ciudad</label>
-    <input type="text" id="ciudad" name="ciudad" required />
+    <input type="text" id="ciudad" name="ciudad" required placeholder="Ej: Tandil"/>
 
     <label for="telefono">Número de teléfono</label>
-    <input type="tel" id="telefono" name="telefono" required />
+    <input type="tel" id="telefono" name="telefono" required placeholder="Ej: +5491123456789"/>
 
     <label for="email">Correo electrónico</label>
-    <input type="email" id="email" name="email" required />
-
-    <div class="error" id="errorMensaje"></div>
+    <input type="email" id="email" name="email" required placeholder="Ej: usuario@usuario.com" />
 
      <div class="imagen">
     <h2>Tu auto es:</h2>
@@ -74,7 +77,7 @@ min="1">
 
  <label for="lugar">Lugar a visitar:</label>
  <input type="text" id="lugar" name="lugar" required placeholder="Ej: 
-Mendoza">
+Mar del Plata">
 
  <label for="personas">Personas a bordo:</label>
  <input type="number" id="personas" name="personas" required 
@@ -83,9 +86,9 @@ placeholder="Ej: 4" min="1">
  <label for="fecha">Fecha de salida:</label>
  <input type="date" id="fecha" name="fecha" required>
 
- <label for="duracion">Duración del viaje (días):</label>
- <input type="number" id="duracion" name="duracion" required 
-placeholder="Ej: 5" min="1">
+    <label for="duracion">Duración del viaje (días):</label>
+    <input type="number" id="duracion" name="duracion" required 
+    placeholder="Ej: 5" min="1">
 
  <label for="tipo">Tipo de viaje:</label>
  <select id="tipo" name="tipo" required>
@@ -99,6 +102,7 @@ placeholder="Ej: 5" min="1">
  <label for="comentarios">Comentarios adicionales:</label>
  <textarea id="comentarios" name="comentarios" rows="4" 
 placeholder="Especificá cualquier información importante..."></textarea>
+<div class="error" id="errorMensaje"></div>
 
  <button type="submit" class="btn-form">Enviar solicitud</button>
 

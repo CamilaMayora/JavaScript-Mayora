@@ -21,12 +21,11 @@ body{
 }
 
 .title{
-    color: var(--color-texto-principal);
-    text-shadow: var(--color-texto-secundario) 4px 2px 2px;
-    font-size: 40px;
-    font-weight: 300;
-    margin-top: 10px;
-    padding-right: 40px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .title2{
@@ -40,10 +39,11 @@ body{
 }
 
 .subtitle{
-    color: var(--color-texto-principal);
-    font-size: 20px;
-    font-weight: 300;
-    margin: 15px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    text-align: justify;
+    white-space: pre-line; 
 }
 
 .icon{
@@ -78,34 +78,45 @@ body{
 }
 
 .info-card{
-    background-color: var(--gris-oscuro);
-    height: 400px;
-    margin: 25px;
-    padding: 7px;
-
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    color: #333;
+    line-height: 1.6;
 }
 
 .ubi-card{
-    background-color: var(--gris-oscuro);
-    height: 500px;
-    margin: 25px;
-    padding: 7px;
-    border-radius: 7px;
+  max-width: 900px;
+  margin: 20px auto ;
+  width: 100%;
+  padding: 25px 20px;
+  background-color: #f4f7f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #2c3e50;
 }
 
 .maps-card {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 30px;
+    gap: 20px;
+    justify-content: center;
 }
+
+.maps-card iframe{
+    border: none;
+    border-radius: 8px;
+    width: 400px;
+    height: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+.maps-card iframe:hover {
+    transform: scale(1.05);
+  }
 
 footer{
     background-color: var(--color-primario);
