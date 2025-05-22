@@ -20,9 +20,8 @@ fetch('../autos.JSON')
     <p><strong>Tipo:</strong> ${auto.tipo}</p>
     <p><strong>Color:</strong> ${auto.color}</p>
     <p><strong>Motor:</strong> ${auto.motor}</p>
-    <p><strong>Descripción:</strong> ${auto.descripcion}</p>
     <p><strong>Precio:</strong> <span class="precio">$${auto.precio}</span></p>
-    <button class= "boton">Lo quiero</button>
+    <button class= "boton btn-quiero">Lo quiero</button>
   </div>
 `;
 
@@ -32,6 +31,38 @@ fetch('../autos.JSON')
   });
 })
 .catch(err => console.error('Error cargando JSON:', err));
+
+
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("btn-quiero")) {
+    const formContainer = document.getElementById("form");
+    formContainer.style.display = "block";
+
+    const imagen = document.getElementById("imagen")
+    const tarjeta = e.target.closest(".tarjeta-auto");
+    const imgSrc = tarjeta.querySelector(".imagen-auto").src;
+
+    img.src = imgSrc;
+    imagen.style.display = "block";
+  }
+});
+
+
+
+
+
+
+function CerrarCartel(element, evento, accion){
+    element.addEventListener(evento,accion)
+}
+const cartel = document.getElementById("form")
+const cerrar1 = document.getElementById("cerrar-cartel")
+
+CerrarCartel(cerrar1, "click", () => {
+    cartel.style.display  = "none"
+})
+
+
 
 
 

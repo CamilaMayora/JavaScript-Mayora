@@ -8,7 +8,7 @@
         "color": "Negro",
         "motor": "6.2L V8",
         "descripcion": "Capacidad: 3-5 personas (doble cabina) Comodidad: Amplio espacio interior, asientos ergonómicos para viajes largos, pero posición de manejo más rígida típica de camionetas.",
-        "precio": 200
+        "precio": 2000
     },
     {
         "modelo": "Chevrolet Camaro",
@@ -18,17 +18,17 @@
         "color": "Rojo",
         "motor": "6.2L V8",
         "descripcion": "Capacidad: 4 personas (2+2, traseros ajustados), Comodidad: Asientos deportivos envolventes, baja altura de ingreso, poco espacio trasero (ideal para 2 adultos cómodos).",
-        "precio": 200
+        "precio": 2000
     },
     {
         "modelo": "Chevrolet Malibu",
-        "img": "https://i.postimg.cc/8kKRMRvG/c3.jpg",
+        "img": "https://i.postimg.cc/T1QgHxrY/asd1.jpg",
         "año": 2021,
         "tipo": "Sedán",
         "color": "Blanco",
         "motor": "1.5L Turbo",
         "descripcion": "Capacidad: 5 adultos (espacio generoso). Comodidad: Suspensión suave, amplio espacio para piernas en traseros, asientos acolchados (excelente para ciudad/carretera).",
-        "precio": 200
+        "precio": 2000
     },
     {
         "modelo": "Chevrolet Equinox",
@@ -38,9 +38,52 @@
         "color": "Azul",
         "motor": "2.0L Turbo",
         "descripcion": "Capacidad: 5 adultos (ó 7 en versión L). Comodidad: Altura elevada para fácil ingreso, asientos reclinables y buen espacio de carga (balance ciudad/viajes).",
-        "precio": 200
+        "precio": 2000
     }
     ],
+    
+    "bmw": [
+        {
+        "modelo": "BMW X5",
+        "img": "https://i.postimg.cc/GhqxXFQJ/bmw1.jpg",
+        "año": 2023,
+        "tipo": "SUV",
+        "color": "Negro",
+        "motor": "3.0L Turbo I6",
+        "descripcion": "Capacidad: 5 personas. Comodidad: Interior lujoso con tecnología avanzada.",
+        "precio": 2700
+        },
+        {
+        "modelo": "BMW M3",
+        "img": "https://i.postimg.cc/HkN4gTFr/bmw2.jpg",
+        "año": 2022,
+        "tipo": "Deportivo",
+        "color": "Azul",
+        "motor": "3.0L Turbo I6",
+        "descripcion": "Capacidad: 4 personas. Comodidad: Asientos deportivos y manejo dinámico.",
+        "precio": 2700
+        },
+        {
+        "modelo": "BMW Serie 3",
+        "img": "https://i.postimg.cc/7ZhMd5tv/bmw3.jpg",
+        "año": 2021,
+        "tipo": "Sedán",
+        "color": "Blanco",
+        "motor": "2.0L Turbo I4",
+        "descripcion": "Capacidad: 5 personas. Comodidad: Confort premium y tecnología integrada.",
+        "precio": 2700
+        },
+        {
+        "modelo": "BMW iX",
+        "img": "https://i.postimg.cc/ZqyPY1hV/bmw4.jpg",
+        "año": 2023,
+        "tipo": "SUV Eléctrico",
+        "color": "Gris",
+        "motor": "Eléctrico dual motor",
+        "descripcion": "Capacidad: 5 personas. Comodidad: Innovación eléctrica con gran autonomía.",
+        "precio": 2700
+        }
+],
     "toyota": [
     {
         "modelo": "Toyota Camry",
@@ -50,7 +93,7 @@
         "color": "Gris",
         "motor": "2.5L I4",
         "descripcion": "Capacidad: 5 adultos (espacio premium). Comodidad: Asientos ventilados disponibles,aislamiento acústico superior, suspensión adaptativa (el más lujoso de la línea)",
-        "precio": 250
+        "precio": 2200
     },
     {
         "modelo": "Toyota Corolla",
@@ -60,7 +103,7 @@
         "color": "Blanco",
         "motor": "1.8L I4",
         "descripcion": "Capacidad: 5 adultos (traseros algo justos). Comodidad: Asientos básicos pero ergonómicos, manejo ágil en ciudad (ideal para uso urbano).",
-        "precio": 250
+        "precio": 2200
     },
     {
         "modelo": "Toyota RAV4",
@@ -70,7 +113,7 @@
         "color": "Negro",
         "motor": "2.5L I4",
         "descripcion": "Capacidad: 5 adultos (versión híbrida disponible).Comodidad: Altura regulable, amplio campo visual, maletero de 580L (perfecto para familias activas).",
-        "precio": 250
+        "precio": 2200
     },
     {
         "modelo": "Toyota Tacoma",
@@ -80,7 +123,7 @@
         "color": "Azul",
         "motor": "3.5L V6",
         "descripcion": "Capacidad: 5 personas (Doble Cabina). Comodidad: Asientos reforzados para off-road, cabina insonorizada, versión TRD con suspensión especial para terrenos rudos.",
-        "precio": 250
+        "precio": 2200
     }
     ],
     "mercedesbenz": [
@@ -92,7 +135,7 @@
         "color": "Plata",
         "motor": "4.0L V8 Biturbo",
         "descripcion": "Capacidad: 5 adultos (espacio ejecutivo). Comodidad: Asientos climatizados masajeadores, sistema de sonido Burmester 4D, suspensión Magic Body Control que lee el camino.",
-        "precio": 1000
+        "precio": 2700
     },
     {
         "modelo": "Mercedes-Benz E-Class",
@@ -102,7 +145,7 @@
         "color": "Negro",
         "motor": "3.0L I6 Turbo",
         "descripcion": "Capacidad: 5 adultos. Comodidad: Asientos multicontorno con memoria, pantallas duales 12.3\", control de clima de 4 zonas y asistencia de conducción semi-autónoma.",
-        "precio": 1000
+        "precio": 2700
     },
     {
         "modelo": "Mercedes-Benz GLC",
@@ -112,7 +155,7 @@
         "color": "Blanco",
         "motor": "2.0L I4 Turbo",
         "descripcion": "Capacidad: 5 adultos (7 en versión L). Comodidad: Altura elevada para mejor visibilidad, techo panorámico, maletero de 550L y MBUX con realidad aumentada.",
-        "precio": 1000
+        "precio": 2700
     },
     {
         "modelo": "Mercedes-Benz A-Class",
@@ -122,9 +165,53 @@
         "color": "Azul",
         "motor": "2.0L I4 Turbo",
         "descripcion": "Capacidad: 5 adultos (compacto). Comodidad: Cabina digital widescreen, MBUX con reconocimiento de voz, asientos deportivos y manejo ágil para ciudad.",
-        "precio": 1000
+        "precio": 2700
     }
     ],
+
+    "tesla": [
+    {    
+        "modelo": "Tesla Model S",
+        "img": "https://i.postimg.cc/HsPGM7fj/tes1.jpg",
+        "año": 2023,
+        "tipo": "Sedán Eléctrico",
+        "color": "Rojo",
+        "motor": "Dual Motor AWD",
+        "descripcion": "Capacidad: 5 personas. Comodidad: Interior minimalista con tecnología de punta.",
+        "precio": 3500
+    },
+    {
+        "modelo": "Tesla Model 3",
+        "img": "https://i.postimg.cc/MKG2XY3h/tes2.jpg",
+        "año": 2022,
+        "tipo": "Sedán Eléctrico",
+        "color": "Blanco",
+        "motor": "Motor Eléctrico RWD",
+        "descripcion": "Capacidad: 5 personas. Comodidad: Conducción autónoma y diseño moderno.",
+        "precio": 3500
+    },
+    {
+        "modelo": "Tesla Model X",
+        "img": "https://i.postimg.cc/T3ZZ7v26/tes3.jpg",
+        "año": 2023,
+        "tipo": "SUV Eléctrico",
+        "color": "Negro",
+        "motor": "Dual Motor AWD",
+        "descripcion": "Capacidad: 7 personas. Comodidad: Puertas Falcon y tecnología avanzada.",
+        "precio": 3500
+    },
+    {
+        "modelo": "Tesla Model Y",
+        "img": "https://i.postimg.cc/x1kw3125/tes4.jpg",
+        "año": 2023,
+        "tipo": "SUV Compacto Eléctrico",
+        "color": "Azul",
+        "motor": "Dual Motor AWD",
+        "descripcion": "Capacidad: 5 personas. Comodidad: Versátil, espacioso y eficiente.",
+        "precio": 3500
+    }
+],
+
     "lamborghini": [
     {
         "modelo": "Lamborghini Aventador",
@@ -134,7 +221,7 @@
         "color": "Amarillo",
         "motor": "6.5L V12",
         "descripcion": "Capacidad: 2 personas (configuración coupé). Comodidad: Asientos deportivos carbon fiber ajustables, modo Strada para conducción diaria y carrocería monocoque de fibra de carbono.",
-        "precio": 10000
+        "precio": 5000
     },
     {
         "modelo": "Lamborghini Huracán",
@@ -144,7 +231,7 @@
         "color": "Rojo",
         "motor": "5.2L V10",
         "descripcion": "Capacidad: 2 personas. Comodidad: Suspensión magnetorheológica, volante multifunción con modo ANIMA, y sistema de infoentretenimiento Lamborghini Connect.",
-        "precio": 10000
+        "precio": 5000
     },
     {
         "modelo": "Lamborghini Urus",
@@ -154,7 +241,7 @@
         "color": "Negro",
         "motor": "4.0L V8 Biturbo",
         "descripcion": "Capacidad: 5 adultos (lujo extremo). Comodidad: Asientos de piel premium con calefacción/ventilación, espacio para maletas de 616L y 4 modos de conducción (incluido Sabbia para arena).",
-        "precio": 10000
+        "precio": 5000
     },
     {
         "modelo": "Lamborghini Sián",
@@ -164,7 +251,7 @@
         "color": "Verde",
         "motor": "6.5L V12 híbrido",
         "descripcion": "Capacidad: 2 personas (edición limitada). Comodidad: Materiales exclusivos de personalización Ad Personam, tecnología supercapacitor y aerodinámica activa inteligente.",
-        "precio": 10000
+        "precio": 5000
     }
     ]
 }

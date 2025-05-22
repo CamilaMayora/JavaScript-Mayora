@@ -82,11 +82,11 @@ body{
 
 
 #informacion {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    gap: 20px;
+     display: grid;
+ grid-template-columns: repeat(4, 1fr); 
+ gap: 1.5rem;
+ padding: 2rem;
+ max-width: 1400px;
 }
 
 .tarjeta-auto {
@@ -94,8 +94,9 @@ body{
     border: 1px solid #000000;
     border-radius: 10px;
     margin: 10px;
+    padding: 7px;
     width: 400px;
-    height: 850px;
+    height: 700px;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -106,11 +107,12 @@ body{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.imagen-auto {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-bottom: 3px solid var(--color-primario);
+.imagen-auto{
+width: 100%;
+max-width: 500px;
+height: 350px;
+border-radius: 10px;
+object-fit: cover;
 }
 
 .informacion-auto {
@@ -214,4 +216,183 @@ footer{
     font-size: 15px;
 }
 
+/*!Formulario*/
 
+#form {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--color-secundario);
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-primario);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: sans-serif;
+}
+
+.form-container h1,
+.form-container h2,
+.form-container h3 {
+  color: var(--color-primario);
+  margin-bottom: 10px;
+}
+
+#formularioAlquiler {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: var(--color-texto-principal);
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid var(--gris-oscuro);
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--color-texto-principal);
+   width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn-form {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-form:hover {
+  background-color: #16303f;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: var(--color-precios);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  background-color: darkred;
+}
+
+.imagen {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.imagen img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--color-primario);
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+
+
+
+
+/*!ESTILOS PARA EL AYUDA.HTML*/
+
+#contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1400px;
+  box-sizing: border-box;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border: var(--color-texto-secundario) 1px solid;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-card img.imagen {
+  width: 100%;
+  max-width: 250px;
+  box-shadow: black 2px 2px 2px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.info-card h2 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0.3rem 0;
+}
+
+.texto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+
+    margin: 10px;
+    padding: 5px;
+}

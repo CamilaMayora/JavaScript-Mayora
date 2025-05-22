@@ -25,9 +25,90 @@
     </header> 
     <main>
 
-        <div id="informacion">
-        </div>
+        <div id="informacion"></div>
 
+
+<div id="form" class="form-container">
+
+    <button class="close-btn" id="cerrar-cartel">X</button>
+
+    <h1>Formulario de Alquiler</h1>
+
+    <form id="formularioAlquiler">
+
+    <label for="nombre">Nombre/s</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido" required />
+
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" name="edad" required min="18" />
+
+    <label for="licencia">Licencia de conducir</label>
+    <input type="text" id="licencia" name="licencia" required />
+
+    <label for="documento">Número de documento</label>
+    <input type="text" id="documento" name="documento" required />
+
+    <label for="ciudad">Ciudad</label>
+    <input type="text" id="ciudad" name="ciudad" required />
+
+    <label for="telefono">Número de teléfono</label>
+    <input type="tel" id="telefono" name="telefono" required />
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" required />
+
+    <div class="error" id="errorMensaje"></div>
+
+     <div class="imagen">
+    <h2>Tu auto es:</h2>
+    <img src="" alt="Auto seleccionado" id="img" />
+    
+     <h3>Información del viaje</h3>
+
+ <label for="kms">Kilómetros a recorrer:</label>
+ <input type="number" id="kms" name="kms" required placeholder="Ej: 300" 
+min="1">
+
+ <label for="lugar">Lugar a visitar:</label>
+ <input type="text" id="lugar" name="lugar" required placeholder="Ej: 
+Mendoza">
+
+ <label for="personas">Personas a bordo:</label>
+ <input type="number" id="personas" name="personas" required 
+placeholder="Ej: 4" min="1">
+
+ <label for="fecha">Fecha de salida:</label>
+ <input type="date" id="fecha" name="fecha" required>
+
+ <label for="duracion">Duración del viaje (días):</label>
+ <input type="number" id="duracion" name="duracion" required 
+placeholder="Ej: 5" min="1">
+
+ <label for="tipo">Tipo de viaje:</label>
+ <select id="tipo" name="tipo" required>
+ <option value="">-- Seleccionar --</option>
+ <option value="Turismo">Turismo</option>
+ <option value="Trabajo">Trabajo</option>
+ <option value="Familiar">Familiar</option>
+ <option value="Aventura">Aventura</option>
+ </select>
+
+ <label for="comentarios">Comentarios adicionales:</label>
+ <textarea id="comentarios" name="comentarios" rows="4" 
+placeholder="Especificá cualquier información importante..."></textarea>
+
+ <button type="submit" class="btn-form">Enviar solicitud</button>
+
+</form>
+
+</div>
+    </div>
+</div>
+
+</div>
     </main>
 
     <footer>
