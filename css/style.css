@@ -18,6 +18,12 @@
 
 body{
     background-color: var(--color-secundario);
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
 }
 
 .title{
@@ -121,6 +127,7 @@ body{
 footer{
     background-color: var(--color-primario);
     height: 100px;
+    
 }
 
 .footer-card{

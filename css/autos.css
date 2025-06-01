@@ -49,6 +49,16 @@ body{
     margin: 15px;
 }
 
+.text{
+  color: var(--color-texto-secundario);
+  text-shadow: var(--color-primario) 3px 4px 1px;
+  text-align: left;
+  margin: 10px 20px 10px 50px;
+  font-size: 30px;
+  font-weight: 700;
+  padding-right: 40px;
+}
+
 .aviso{
   color: var(--color-precios);               
   background-color: var(--color-secundario); 
@@ -296,6 +306,7 @@ textarea {
 
 .btn-form {
   background-color: var(--color-primario);
+  margin-top: 5px;
   color: white;
   padding: 12px;
   border: none;
@@ -346,7 +357,97 @@ textarea {
   font-weight: bold;
 }
 
+/*! USUARIO*/
+.user-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px;
+}
 
+.user-card{
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-primario);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 700px;
+}
+
+input{
+  margin-top: 5px;
+}
+
+#mostrarReserva {
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(31, 59, 77, 0.2);
+  color: var(--color-texto-principal);
+}
+
+#mostrarReserva p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: var(--color-texto-secundario);
+}
+
+#mostrarReserva p strong {
+  color: var(--color-primario);
+  font-size: 1.1rem;
+}
+
+#mostrarReserva img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px auto;
+  border-radius: 6px;
+  border: 1px solid var(--gris-oscuro);
+}
+
+#mostrarReserva span {
+  font-weight: 600;
+  color: var(--color-texto-principal);
+}
+
+.botones-reserva {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.botones-reserva button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: var(--color-secundario);
+}
+
+#btnBorrarReserva {
+  background-color: var(--color-precios);
+}
+
+#btnBorrarReserva:hover {
+  background-color: #a00000;
+}
+
+#btnCambiarDias {
+  background-color: var(--color-primario);
+}
+
+#btnCambiarDias:hover {
+  background-color: #163344;
+}
 
 
 
@@ -406,8 +507,8 @@ textarea {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 500;
 
     margin: 10px;
     padding: 5px;

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConfiRent</title>
+    <link rel="shortcut icon" href="../img/servicio-de-auto.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/autos.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/usuario.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script dedfer src="https://cdn.jsdelivr.net/npm/validator@13.9.0/validator.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+    <div class="icon">
+        <img src="../img/alquiler-de-coches.png" alt="">
+        </div>
+    <ul class="link-head">
+        <li>
+            <a href="../index.html">HOME</a>
+            <a href="./autos.html" id="auto">AUTOS</a>
+            <a href="./ayuda.html" id="ayuda">AYUDA</a>
+            <a href="./usuario.html" id="person"><i class="bi bi-person-circle"></i></a>
+        </li>
+    </ul>
+    </nav>
+
+    </header>
+    <main>
+        <div>
+            <p class="texto">En Confirent, cada usuario es parte fundamental de nuestra comunidad. Nuestra plataforma está diseñada para brindar una experiencia segura, personalizada y eficiente, tanto para nuevos visitantes como para clientes habituales.
+
+Al registrarse, los usuarios acceden a funcionalidades exclusivas, como la simulación personalizada de alquileres, historial de operaciones, contacto directo con el equipo de soporte y beneficios especiales en promociones y tarifas. El proceso de inicio de sesión garantiza que cada cuenta esté protegida, permitiendo que solo el propietario acceda a su información y gestiones.
+
+Además, fomentamos la confianza y la transparencia, por lo que cada usuario puede gestionar sus datos, actualizar su perfil y consultar sus registros de actividad en cualquier momento.
+
+En Confirent, tu seguridad y comodidad son nuestra prioridad.</p>
+        </div>
+                <div class="user-container" >
+
+<form id="registroForm" class="user-card" >
+    <h2 class="text">Registrarse:</h2>
+    <input type="text" id="regNombre" placeholder="Nombre" >
+    <input type="email" id="regEmail" placeholder="Email">
+    <input type="password" id="regPassword" placeholder="Contraseña" >
+    <button type="submit" class="btn-form"> Registrarse</button>
+</form>
+
+<form id="loginForm" class="user-card">
+    <h2 class="text">Iniciar sesión:</h2>
+    <input type="email" id="loginEmail" placeholder="Email" >
+    <input type="password" id="loginPassword" placeholder="Contraseña" >
+    <button type="submit" class="btn-form">Iniciar Sesión</button>
+</form>
+</div>
+
+<div id="mostrarReserva">
+
+    <p><strong>Auto seleccionado:</strong></p>
+    <p>Modelo: <span id="mostrarModelo"></span></p>
+    <img id="img" src="" alt="" style="max-width: 300px; margin-top: 10px;" />
+
+    <p>Nombre: <span id="mostrarNombre"></span></p>
+    <p>Apellido: <span id="mostrarApellido"></span></p>
+    <p>Edad: <span id="mostrarEdad"></span></p>
+    <p>Licencia: <span id="mostrarLicencia"></span></p>
+    <p>Documento: <span id="mostrarDocumento"></span></p>
+    <p>Ciudad: <span id="mostrarCiudad"></span></p>
+    <p>Teléfono: <span id="mostrarTelefono"></span></p>
+    <p>Email: <span id="mostrarEmail"></span></p>
+    <p>Kilómetros: <span id="mostrarKms"></span></p>
+    <p>Lugar: <span id="mostrarLugar"></span></p>
+    <p>Personas: <span id="mostrarPersonas"></span></p>
+    <p>Fecha: <span id="mostrarFecha"></span></p>
+    <p>Duración: <span id="mostrarDuracion"></span></p>
+    <p>Tipo de viaje: <span id="mostrarTipo"></span></p>
+
+
+    <div class="botones-reserva">
+    <button id="btnBorrarReserva" class="btn btn-danger">Borrar reserva</button>
+    </div>
+
+</div>
+
+
+    </main>
+
+        <footer>
+            <div class="footer-card">
+    <div class="info-footer-card">
+        <ul>
+            <li>
+                <a href="../index.html">HOME</a>
+                <a href="./autos.html">AUTOS</a>
+                <a href="./ayuda.html">AYUDA</a>
+            </li>
+        </ul>
+    </div>
+    <div class="icon">
+        <img src="../img/carro-deportivo.png" alt="">
+        </div>
+    <div class="icon-footer-card">
+        <p><i class="bi bi-whatsapp"></i></p>
+        <p><i class="bi bi-instagram"></i></p>
+        <p><i class="bi bi-envelope-at"></i></p>
+    </div>
+</div>
+    </footer>
+</body>
+</html>
